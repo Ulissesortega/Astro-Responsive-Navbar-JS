@@ -1,0 +1,100 @@
+---
+
+---
+
+<nav class="navbar">
+    <div>
+        <p>LOGO</p>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <div class="bars-icon" id="bars">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</nav>
+
+<style>
+    .navbar {
+        background-color: black;
+        color: bisque;        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        padding: 0 25px;
+        position: relative;        
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+        list-style: none;                
+    }
+
+    .nav-links a {
+        color: bisque;
+        text-transform: uppercase;
+        list-style: none;
+        text-decoration: none;
+        
+    }
+
+    /* hidding the burger menu in desktop view */
+    .bars-icon {
+        display: none;
+    }
+
+    /* resposive design */
+    @media (max-width: 768px) {
+
+        
+        .bars-icon{
+            display: block;
+        }
+
+        .navbar .nav-links{    
+            background-color: black;                    
+            position: absolute;                        
+            top: 30px;
+            left: 0px;      
+            right: 0px;                  
+            flex-direction: column;
+            text-align: center;
+            gap: 0;
+            display: none;
+        }
+        .nav-links li{    
+            padding: 20px;
+        }
+
+        .navbar .nav-links.show {
+        display: flex; /* Show when the "show" class is added */
+    }
+    }
+</style>
+
+<script>
+    // Using DOMContentLoaded to ensure the DOM is fully loaded before accessing elements
+    document.addEventListener('DOMContentLoaded', () => {
+    const bars = document.getElementById('bars');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Toggle the 'show' class on click
+    bars.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+    // Check screen size on resize to remove 'show' class if width > 768px
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('show'); // Reset to hidden if desktop view
+        }
+    });
+});
+</script>
