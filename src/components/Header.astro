@@ -10,7 +10,7 @@
     <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="">Products</a></li>
+        <li><a href="/products">Products</a></li>
         <li><a href="">Gallery</a></li>
         <li><a href="">Contact</a></li>
     </ul>
@@ -23,18 +23,18 @@
 <style>
     .navbar {
         background-color: black;
-        color: bisque;        
+        color: bisque;
         display: flex;
         justify-content: space-between;
-        align-items: center;        
+        align-items: center;
         padding: 0 25px;
-        position: relative;        
+        position: relative;
     }
 
     .nav-links {
         display: flex;
         gap: 1rem;
-        list-style: none;                
+        list-style: none;
     }
 
     .nav-links a {
@@ -42,7 +42,6 @@
         text-transform: uppercase;
         list-style: none;
         text-decoration: none;
-        
     }
 
     /* hidding the burger menu in desktop view */
@@ -52,52 +51,52 @@
 
     /* resposive design */
     @media (max-width: 768px) {
-
-        
-        .bars-icon{
+        .bars-icon {
             display: block;
         }
 
-        .navbar .nav-links{    
-            background-color: black;                    
-            position: absolute;                        
-            top: 30px;
-            left: 0px;      
-            right: 0px;                  
+        /* Updated .navbar for Mobile */
+        .navbar .nav-links {
+            display: none; /* Hidden by default */
+            background-color: black;
+            position: absolute;
+            top: 30px; /* Adjust this to place the menu below the navbar */
+            left: 0;
+            right: 0;
             flex-direction: column;
             text-align: center;
             gap: 0;
-            display: none;
-        }
-        .nav-links{    
-            padding: 20px;            
+            padding: 20px;
+            z-index: 1000; /* Add z-index to ensure it appears on top */
         }
 
+        /* Show the nav-links when the "show" class is added */
         .navbar .nav-links.show {
-            display: flex; /* Show when the "show" class is added */
+            display: flex; /* Show the menu when toggled */
         }
-        .nav-links li { 
-            margin-bottom: 20px; 
+
+        .nav-links li {
+            margin-bottom: 20px;
         }
     }
 </style>
 
 <script>
     // Using DOMContentLoaded to ensure the DOM is fully loaded before accessing elements
-    document.addEventListener('DOMContentLoaded', () => {
-    const bars = document.getElementById('bars');
-    const navLinks = document.querySelector('.nav-links');
+    document.addEventListener("DOMContentLoaded", () => {
+        const bars = document.getElementById("bars");
+        const navLinks = document.querySelector(".nav-links");
 
-    // Toggle the 'show' class on click
-    bars.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
+        // Toggle the 'show' class on click
+        bars.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
 
-    // Check screen size on resize to remove 'show' class if width > 768px
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            navLinks.classList.remove('show'); // Reset to hidden if desktop view
-        }
+        // Check screen size on resize to remove 'show' class if width > 768px
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove("show"); // Reset to hidden if desktop view
+            }
+        });
     });
-});
 </script>
