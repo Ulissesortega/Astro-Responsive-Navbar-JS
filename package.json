@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.7"
+    "astro": "^4.16.7",
+    "astro-cloudinary": "^1.1.2"
   }
 }
