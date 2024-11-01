@@ -4,15 +4,15 @@
 
 <nav class="navbar">
     <div>
-        <p>LOGO</p>
+        <a href="/"><img src="src/assets/GELogosmall.png" alt=""></a>        
     </div>
 
     <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/products">Products</a></li>
-        <li><a href="/">Gallery</a></li>
-        <li><a href="/">Contact</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
 
     <div class="bars-icon" id="bars">
@@ -27,7 +27,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 25px;
+        padding: 5px 45px;
         position: relative;        
     }
 
@@ -60,13 +60,12 @@
             display: none; /* Hidden by default */
             background-color: black;
             position: absolute;
-            top: 30px; /* Adjust this to place the menu below the navbar */
+            top: 45px; /* Adjust this to place the menu below the navbar */
             left: 0;
             right: 0;
             flex-direction: column;
             text-align: center;
             gap: 0;
-            
             padding: 20px;
             z-index: 1000; /* Add z-index to ensure it appears on top */
         }
