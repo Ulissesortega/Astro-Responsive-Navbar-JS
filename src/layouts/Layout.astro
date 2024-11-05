@@ -1,9 +1,10 @@
 ---
 import ViewTransitions from 'astro/components/ViewTransitions.astro';
-import Header from '../components/Header.astro'
-import Hero from '../components/Hero.astro'
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,26 +12,27 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<ViewTransitions />
-		<Header />		
-		<slot />
-		<script src="https://kit.fontawesome.com/059f4102ce.js" crossorigin="anonymous" is:inline></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <ViewTransitions />
+    <Header />
+    <slot />
+    <!-- Add the `is:inline` directive explicitly to silence the Astro hint -->
+    <script is:inline data-astro-rerun src="https://kit.fontawesome.com/059f4102ce.js" crossorigin="anonymous"></script>
+  </body>
 </html>
 
 <style is:global>
-	html, body {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 </style>

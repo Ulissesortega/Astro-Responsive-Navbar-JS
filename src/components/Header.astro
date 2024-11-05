@@ -16,7 +16,7 @@
     </ul>
 
     <div class="bars-icon" id="bars">
-        <i class="fa-solid fa-bars"></i>
+        <i  class="fa-solid fa-bars"></i>
     </div>
 </nav>
 
@@ -81,14 +81,15 @@
     }
 </style>
 
+
 <script>
     // Using DOMContentLoaded to ensure the DOM is fully loaded before accessing elements
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("astro:page-load", () => {
         const bars = document.getElementById("bars");
         const navLinks = document.querySelector(".nav-links");
 
         // Toggle the 'show' class on click
-        bars.addEventListener("click", () => {
+        bars.addEventListener( "click", () => {
             navLinks.classList.toggle("show");
         });
 
@@ -100,3 +101,4 @@
         });
     });
 </script>
+
