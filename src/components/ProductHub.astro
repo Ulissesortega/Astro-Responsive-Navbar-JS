@@ -1,56 +1,62 @@
 ---
-import { Image } from 'astro:assets';
-import Quartz702 from '../assets/CT-702.jpg'
+import { Image } from "astro:assets";
+import Quartz702 from "/public/images/CT-702.jpg";
 ---
 
 <div class="product-hub">
     <div>
-        <a href="/productDetails"><Image class="product" src={Quartz702} alt="Countertop" transition:name="img" height="375"/
-            
-            
-            
-            
-            
-            
-            
-            
-            ></a>        
-    </div>
-    
-    <div>
-        <a href=""><img class="product" src="../src/assets/Vanity.jpg" alt="" /></a>
-        
-    </div>
-    
-    <div>
-        <a href=""><img class="product" src="../src/assets/Vanity.jpg" alt="" /></a>
-    </div>
-    
-    <div>
-        <a href=""><img class="product" src="../src/assets/Vanity.jpg" alt="" /></a>
-    </div>
-    
-    <div>
-        <a href=""><img class="product" src="../src/assets/Vanity.jpg" alt="" /></a>
-    </div>
-</div>
+        <a href="/productDetails"
+            ><Image
+                class="product"
+                src={Quartz702}
+                alt="Countertop"
+                transition:name="img"
+                height="375"
+            />
+        </a>
 
-<style>
-    .product-hub {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 10px;
-        padding: 15px 15px;        
-    }
+        <div>
+            <a href=""
+                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
+            >
+        </div>
 
-    .product {
-        width: 100%;
-        border-radius: 15px;
-    }
+        <div>
+            <a href=""
+                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
+            >
+        </div>
 
-    @media (max-width: 768px) {
+        <div>
+            <a href=""
+                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
+            >
+        </div>
+
+        <div>
+            <a href=""
+                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
+            >
+        </div>
+    </div>
+
+    <style>
         .product-hub {
-            grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 15px 15px;
         }
-    }
-</style>
+
+        .product {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .product-hub {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+            }
+        }
+    </style>
+</div>
