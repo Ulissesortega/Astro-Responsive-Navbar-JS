@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import CT612 from "/public/images/CT-612.jpg"; // Image is 1600x900
+---
+
+<div class="product-hub">
+    <div class="product">
+        <a href="/products">
+            <Image
+                src={CT612}
+                alt="full size countertop"
+                transition:name="img"
+                style="width: 100%; height: 450px; object-fit: cover;"
+            />
+        </a>
+    </div>
+</div>
+
+<style></style>

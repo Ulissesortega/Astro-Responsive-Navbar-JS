@@ -3,40 +3,41 @@ import { Image } from "astro:assets";
 import Quartz702 from "/public/images/CT-702.jpg";
 ---
 
-<div class="product-hub">
-    <div>
-        <a href="/productDetails"
-            ><Image
-                class="product"
-                src={Quartz702}
-                alt="Countertop"
-                transition:name="img"
-                height="375"
-            />
-        </a>
-
-        <div>
-            <a href=""
-                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
-            >
+<div>
+    <div class="product-hub">
+        <div class="product-card">
+            <a href="/product">
+                <Image class="product-image" src={Quartz702} alt="Countertop" transition:name="img" height="375" />
+                <p class="product-text">Countertops</p>
+            </a>
         </div>
 
-        <div>
-            <a href=""
-                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
-            >
+        <div class="product-card">
+            <a href="">
+                <img class="product-image" src="images/Vanity.jpg" alt="" />
+                <p class="product-text">test</p>
+            </a>
         </div>
 
-        <div>
-            <a href=""
-                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
-            >
+        <div class="product-card">
+            <a href="">
+                <img class="product-image" src="images/Vanity.jpg" alt="" />
+                <p class="product-text">test</p>
+            </a>
         </div>
 
-        <div>
-            <a href=""
-                ><img class="product" src="public/image/Vanity.jpg" alt="" /></a
-            >
+        <div class="product-card">
+            <a href="">
+                <img class="product-image" src="images/Vanity.jpg" alt="" />
+                <p class="product-text">test</p>
+            </a>
+        </div>
+
+        <div class="product-card">
+            <a href="">
+                <img class="product-image" src="images/Vanity.jpg" alt="" />
+                <p class="product-text">test</p>
+            </a>
         </div>
     </div>
 
@@ -48,9 +49,29 @@ import Quartz702 from "/public/images/CT-702.jpg";
             padding: 15px 15px;
         }
 
-        .product {
+        .product-card {
+            position: relative;
+            overflow: hidden; /* Ensures text stays within the image boundaries */
+        }
+
+        .product-image {
             width: 100%;
             border-radius: 15px;
+            display: block;
+        }
+
+        .product-text {
+            position: absolute;
+            bottom: 10px; /* Distance from the bottom of the image */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent background for better contrast */
+            color: white; /* Text color */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+            white-space: nowrap; /* Prevent text wrapping */
         }
 
         @media (max-width: 768px) {
