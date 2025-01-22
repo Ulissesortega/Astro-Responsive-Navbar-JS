@@ -1,42 +1,43 @@
 ---
 import { Image } from "astro:assets";
 import Quartz702 from "/public/images/CT-702.jpg";
+import Quartz612 from "/public/images/CT-612.jpg";
 ---
 
 <div>
     <div class="product-hub">
         <div class="product-card">
             <a href="/product">
-                <Image class="product-image" src={Quartz702} alt="Countertop" transition:name="img" height="375" />
+                <Image class="product-image" src={Quartz702} alt="Countertop" transition:name="img" height="375"/>
                 <p class="product-text">Countertops</p>
             </a>
         </div>
 
         <div class="product-card">
             <a href="">
-                <img class="product-image" src="images/Vanity.jpg" alt="" />
-                <p class="product-text">test</p>
+                <Image class="product-image" src={Quartz612} alt="Countertop" transition:name="img" height="375"/>
+                <p class="product-text">Countertops</p>
             </a>
         </div>
 
         <div class="product-card">
             <a href="">
-                <img class="product-image" src="images/Vanity.jpg" alt="" />
-                <p class="product-text">test</p>
+                <Image class="product-image" src={Quartz702} alt="Countertop" transition:name="img" height="375"/>
+                <p class="product-text">Countertops</p>
             </a>
         </div>
 
         <div class="product-card">
             <a href="">
-                <img class="product-image" src="images/Vanity.jpg" alt="" />
-                <p class="product-text">test</p>
+                <Image class="product-image" src={Quartz612} alt="Countertop" transition:name="img" height="375"/>
+                <p class="product-text">Countertops</p>
             </a>
         </div>
 
         <div class="product-card">
             <a href="">
-                <img class="product-image" src="images/Vanity.jpg" alt="" />
-                <p class="product-text">test</p>
+                <Image class="product-image" src={Quartz702} alt="Countertop" transition:name="img" height="375"/>
+                <p class="product-text">Countertops</p>
             </a>
         </div>
     </div>
@@ -77,6 +78,37 @@ import Quartz702 from "/public/images/CT-702.jpg";
         @media (max-width: 768px) {
             .product-hub {
                 grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+            }
+
+            .product-card {
+                position: relative;
+                overflow: hidden; /* Ensures text stays within the image boundaries */
+            }
+
+            .product-image {
+                width: 100%;
+                height: 200px;
+                border-radius: 15px;
+                display: block;
+            }
+
+            .product-text {
+                position: absolute;
+                bottom: 10px; /* Distance from the bottom of the image */
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(
+                    0,
+                    0,
+                    0,
+                    0.6
+                ); /* Optional: semi-transparent background for better contrast */
+                color: white; /* Text color */
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 14px;
+                text-align: center;
+                white-space: nowrap; /* Prevent text wrapping */
             }
         }
     </style>
