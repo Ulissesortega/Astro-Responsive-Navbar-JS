@@ -1,22 +1,16 @@
 ---
 import { Image } from "astro:assets";
 import Quartz702 from "/public/images/CT-702.jpg";
-import Quartz612 from "/public/images/CT-612.jpg";
+import Vanity from "/public/images/Vanity.jpg";
+import M36 from "/public/images/M36.webp";
 ---
 
 <div>
     <div class="product-hub">
         <div class="product-card">
             <a href="/product">
-                <Image class="product-image" src={Quartz702} alt="Countertop" transition:name="img" height="375"/>
-                <p class="product-text">Countertops</p>
-            </a>
-        </div>
-
-        <div class="product-card">
-            <a href="">
-                <Image class="product-image" src={Quartz612} alt="Countertop" transition:name="img" height="375"/>
-                <p class="product-text">Countertops</p>
+                <Image class="product-image" src={M36} alt="Countertop" transition:name="img" height="375"/>
+                <p class="product-text">Kitchen Cabinets</p>
             </a>
         </div>
 
@@ -29,17 +23,10 @@ import Quartz612 from "/public/images/CT-612.jpg";
 
         <div class="product-card">
             <a href="">
-                <Image class="product-image" src={Quartz612} alt="Countertop" transition:name="img" height="375"/>
-                <p class="product-text">Countertops</p>
+                <Image class="product-image" src={Vanity} alt="Countertop" transition:name="img" height="375"/>
+                <p class="product-text">Vanity</p>
             </a>
-        </div>
-
-        <div class="product-card">
-            <a href="">
-                <Image class="product-image" src={Quartz702} alt="Countertop" transition:name="img" height="375"/>
-                <p class="product-text">Countertops</p>
-            </a>
-        </div>
+        </div>       
     </div>
 
     <style>
