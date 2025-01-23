@@ -4,8 +4,13 @@
             "id": "M25",
             "name": "Aspen White",
             "descrption": "Shaker Cabinet Style",
-            "pictur": "/images/M25.jpg"
-            
+            "picture": "/images/M25.jpg"
+        },
+        {
+            "id": "M27",
+            "name": "Baron Grey",
+            "descrption": "Shaker Cabinet Style",
+            "picture": "/images/M27.jpg"
         }
     ]
 }

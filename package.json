@@ -7,10 +7,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"     
+    "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.7",
+    "astro": "^5.1.9",
     "astro-cloudinary": "^1.1.2"
   },
   "devDependencies": {
