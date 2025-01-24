@@ -1,114 +1,36 @@
 ---
-import { Image } from "astro:assets";
-import M25 from "/public/images/M25.jpg";
+interface Props {
+    id: string;
+    name: string;
+    description: string;
+    picture: string;
+}
 
+const { id, name, description, picture } = Astro.props as Props;
 ---
 
-<div>
-    <div class="product-hub">
-        <p>This is the Product Detail</p>
-    </div>
+<section class="product-detail">
+    <p><strong>Product ID:</strong> {id}</p>
+    <p><strong>Name:</strong> {name}</p>
+    <p><strong>Description:</strong> {description}</p>
+    <img src={picture} alt={name} class="product-image" />
+</section>
 
-    <style>
-        .product-hub {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            padding: 15px 15px;
-        }
+<style>
+    .product-detail {
+        padding: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-        .product-card {
-            position: relative;
-            overflow: hidden; /* Ensures text stays within the image boundaries */
-        }
-
-        .product-image {
-            width: 100%;
-            border-radius: 15px;
-            display: block;
-        }
-
-        .product-text {
-            position: absolute;
-            bottom: 10px; /* Distance from the bottom of the image */
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent background for better contrast */
-            color: white; /* Text color */
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            text-align: center;
-            white-space: nowrap; /* Prevent text wrapping */
-        }
-
-        @media (max-width: 768px) {
-            .product-hub {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-            }
-
-            .product-card {
-                position: relative;
-                overflow: hidden; /* Ensures text stays within the image boundaries */
-            }
-
-            .product-image {
-                width: 100%;
-                height: 200px;
-                border-radius: 15px;
-                display: block;
-            }
-
-            .product-text {
-                position: absolute;
-                bottom: 10px; /* Distance from the bottom of the image */
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: rgba(0,0,0,0.6); /* Optional: semi-transparent background for better contrast */
-                color: white; /* Text color */
-                padding: 5px 10px;
-                border-radius: 5px;
-                font-size: 14px;
-                text-align: center;
-                white-space: nowrap; /* Prevent text wrapping */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .product-hub {
-                grid-template-columns: 1fr; /* 2 columns on mobile */
-            }
-
-            .product-card {
-                position: relative;
-                overflow: hidden; /* Ensures text stays within the image boundaries */
-            }
-
-            .product-image {
-                width: 100%;
-                height: 200px;
-                border-radius: 15px;
-                display: block;
-            }
-
-            .product-text {
-                position: absolute;
-                bottom: 10px; /* Distance from the bottom of the image */
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: rgba(0,0,0,0.6); /* Optional: semi-transparent background for better contrast */
-                color: white; /* Text color */
-                padding: 5px 10px;
-                border-radius: 5px;
-                font-size: 14px;
-                text-align: center;
-                white-space: nowrap; /* Prevent text wrapping */
-            }
-        }
-    </style>
-</div>
-
-
+    .product-image {
+        width: 100%;
+        border-radius: 15px;
+        display: block;
+        margin-top: 10px;
+    }
+</style>
 
 <!-- ---
 import { Image } from "astro:assets";

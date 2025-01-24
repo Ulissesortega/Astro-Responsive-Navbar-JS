@@ -1,8 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PDetail from "../components/ProductDetail.astro";
+import data from "../data/data.json";
+
+// Assuming you're passing the first product for now
+const product = data.Products[1]; // Replace with logic to select a specific product
 ---
 
 <Layout title="Product Detail">
-    <PDetail />   
+    <PDetail
+        id={product.id}
+        name={product.name}
+        description={product.description}
+        picture={product.picture}
+    />
 </Layout>

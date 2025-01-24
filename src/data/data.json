@@ -1,16 +1,50 @@
 {
     "Products": [
         {
+            "id": "1",
+            "name": "Milzen Kitchen Cabinets",
+            "description": "Shaker Cabinet Style",
+            "picture": "/images/M25.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Countertops",
+            "description": "Shaker Cabinet Style",
+            "picture": "/images/M27.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Vanity",
+            "description": "Shaker Cabinet Style",
+            "picture": "/images/Vanity.jpg"
+        }
+    ],
+    "Milzen Cabinets": [
+        {
             "id": "M25",
-            "name": "Aspen White",
-            "descrption": "Shaker Cabinet Style",
+            "name": "Milzen Kitchen Cabinets",
+            "description": "Shaker Cabinet Style",
             "picture": "/images/M25.jpg"
         },
         {
             "id": "M27",
             "name": "Baron Grey",
-            "descrption": "Shaker Cabinet Style",
+            "description": "Shaker Cabinet Style",
             "picture": "/images/M27.jpg"
+        }
+    ],
+    "Quartz": [
+        {
+            "id": "CT-612",
+            "name": "Quartz1",
+            "description": "Quartz Countertop",
+            "picture": "/images/CT-612.jpg"
+        },
+        {
+            "id": "CT-702",
+            "name": "Quartz2",
+            "description": "Quartz Countertop",
+            "picture": "/images/CT-702.jpg"
         }
     ]
 }
